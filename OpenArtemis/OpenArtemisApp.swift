@@ -78,6 +78,14 @@ struct ContentView: View {
             .tabItem {
                 Label("Settings", systemImage: "gear")
             }
+            
+            // Clipboard Tab
+            getNavigationView(forceNonSplitStack: true) {
+                ClipboardPageView()
+            }
+            .tabItem {
+                Label("Clipboard", systemImage: "clipboard")
+            }
         }
         .overlay {
             if GlobalLoadingManager.shared.loading {
