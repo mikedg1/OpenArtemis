@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BD488602CD82DD200B59F09 /* SafeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD4885F2CD82DD200B59F09 /* SafeImage.swift */; };
 		652E2AA72B25B19C0075911F /* PrivacyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652E2AA62B25B19C0075911F /* PrivacyTab.swift */; };
 		652E2AA92B25B1F10075911F /* HeroBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652E2AA82B25B1F10075911F /* HeroBox.swift */; };
 		653245C12B2AF5D500227019 /* OOBE_PrivacySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653245BC2B2AF5D500227019 /* OOBE_PrivacySelector.swift */; };
@@ -119,6 +120,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BD4885F2CD82DD200B59F09 /* SafeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeImage.swift; sourceTree = "<group>"; };
 		652E2AA62B25B19C0075911F /* PrivacyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyTab.swift; sourceTree = "<group>"; };
 		652E2AA82B25B1F10075911F /* HeroBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroBox.swift; sourceTree = "<group>"; };
 		653245BC2B2AF5D500227019 /* OOBE_PrivacySelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OOBE_PrivacySelector.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 		6535AC012B4563A100E6A2DD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1BD4885F2CD82DD200B59F09 /* SafeImage.swift */,
 				6535AC022B4563AC00E6A2DD /* LiveTextInteraction.swift */,
 			);
 			path = Images;
@@ -795,6 +798,7 @@
 				BB38FC5E2B991DCE002994F1 /* DefaultFavoritesView.swift in Sources */,
 				65D3DBB62B1B1F2200BCCD38 /* LoadingView.swift in Sources */,
 				BBE434772B1BE35F00886CAB /* PersistenceController.swift in Sources */,
+				1BD488602CD82DD200B59F09 /* SafeImage.swift in Sources */,
 				BB3387032B2C171C00EF4D5C /* Theme Wrappers.swift in Sources */,
 				BB391FC82B1ADE790014FB18 /* NavPayloads.swift in Sources */,
 				BBEB46E32B34999B00C33D33 /* ScrapeSearch.swift in Sources */,
