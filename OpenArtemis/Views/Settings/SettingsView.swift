@@ -30,6 +30,8 @@ struct SettingsView: View {
     @Default(.defaultSubSorting) var defaultSubSorting
     @Default(.defaultLaunchFeed) var defaultLaunchFeed
     
+    @Default(.useAntiFingerprinting) var useAntiFingerprinting
+
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(sortDescriptors: [ SortDescriptor(\.name) ]) var localFavorites: FetchedResults<LocalSubreddit>
     @FetchRequest(sortDescriptors: []) var readPosts: FetchedResults<ReadPost>
@@ -116,7 +118,17 @@ struct SettingsView: View {
                 }
             }
             
-            Section("Appearance"){
+            Section("Privacy") {
+                Group {
+                    Toggle("Use anti-fingerprinting", isOn: useAntiFingerprinting)
+                    Text("Note: This option currently only changes the user agent, so it will not be effective for privacy.")
+                        .font(textSizePreference.caption)
+                        .foregroundColor(.secondary)
+                        .padding(.top, 4)
+                }
+            }
+            
+            Section("Appearance") {
                 Picker("Preferred Theme", selection: Binding(get: {
                     appTheme.preferredThemeMode
                 }, set: { val, _ in

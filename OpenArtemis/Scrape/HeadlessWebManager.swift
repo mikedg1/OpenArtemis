@@ -15,6 +15,7 @@ class HeadlessWebManager: NSObject, WKNavigationDelegate {
     private var shouldAutoClickExpando: Bool = false
     
     @Default(.over18) var over18
+    @Default(.useAntiFingerprinting) var useAntiFingerprinting
     
     override init() {
         super.init()
@@ -28,6 +29,12 @@ class HeadlessWebManager: NSObject, WKNavigationDelegate {
         self.shouldAutoClickExpando = autoClickExpando  // Store the flag value
         
         let request = URLRequest(url: url)
+        
+        if useAntiFingerprinting {
+            // Will need to add more
+            self.webView.customUserAgent = UserAgents().getUserAgent(type: .httpLibrary) // works for old.reddit but none of the other domains...
+        }
+        
         if !preventCacheClear {
             clearWebCache { [weak self] in
                 guard let self = self else { return }
