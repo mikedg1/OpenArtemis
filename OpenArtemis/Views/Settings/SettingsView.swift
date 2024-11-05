@@ -120,7 +120,7 @@ struct SettingsView: View {
             
             Section("Privacy") {
                 Group {
-                    Toggle("Use anti-fingerprinting", isOn: useAntiFingerprinting)
+                    Toggle("Use anti-fingerprinting", isOn: $useAntiFingerprinting)
                     Text("Note: This option currently only changes the user agent, so it will not be effective for privacy.")
                         .font(textSizePreference.caption)
                         .foregroundColor(.secondary)
