@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1AAF1ED42CDC0A35003E08EB /* FixAlertForMacOSStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF1ED32CDC0A32003E08EB /* FixAlertForMacOSStyle.swift */; };
-		1A7739F32CDB350200C58FE8 /* OnScrolledOffTopOfScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7739F22CDB34F400C58FE8 /* OnScrolledOffTopOfScreen.swift */; };
-		1BD488602CD82DD200B59F09 /* SafeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD4885F2CD82DD200B59F09 /* SafeImage.swift */; };
 		1A7739F12CD8E95C00C58FE8 /* UserAgents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7739F02CD8E95700C58FE8 /* UserAgents.swift */; };
+		1A7739F32CDB350200C58FE8 /* OnScrolledOffTopOfScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7739F22CDB34F400C58FE8 /* OnScrolledOffTopOfScreen.swift */; };
+		1AAF1ED42CDC0A35003E08EB /* FixAlertForMacOSStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF1ED32CDC0A32003E08EB /* FixAlertForMacOSStyle.swift */; };
+		1BD488602CD82DD200B59F09 /* SafeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD4885F2CD82DD200B59F09 /* SafeImage.swift */; };
 		652E2AA72B25B19C0075911F /* PrivacyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652E2AA62B25B19C0075911F /* PrivacyTab.swift */; };
 		652E2AA92B25B1F10075911F /* HeroBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652E2AA82B25B1F10075911F /* HeroBox.swift */; };
 		653245C12B2AF5D500227019 /* OOBE_PrivacySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653245BC2B2AF5D500227019 /* OOBE_PrivacySelector.swift */; };
@@ -123,10 +123,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1AAF1ED32CDC0A32003E08EB /* FixAlertForMacOSStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixAlertForMacOSStyle.swift; sourceTree = "<group>"; };
-		1A7739F22CDB34F400C58FE8 /* OnScrolledOffTopOfScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnScrolledOffTopOfScreen.swift; sourceTree = "<group>"; };
-		1BD4885F2CD82DD200B59F09 /* SafeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeImage.swift; sourceTree = "<group>"; };
 		1A7739F02CD8E95700C58FE8 /* UserAgents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgents.swift; sourceTree = "<group>"; };
+		1A7739F22CDB34F400C58FE8 /* OnScrolledOffTopOfScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnScrolledOffTopOfScreen.swift; sourceTree = "<group>"; };
+		1AAF1ED32CDC0A32003E08EB /* FixAlertForMacOSStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixAlertForMacOSStyle.swift; sourceTree = "<group>"; };
+		1BD4885F2CD82DD200B59F09 /* SafeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeImage.swift; sourceTree = "<group>"; };
 		652E2AA62B25B19C0075911F /* PrivacyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyTab.swift; sourceTree = "<group>"; };
 		652E2AA82B25B1F10075911F /* HeroBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroBox.swift; sourceTree = "<group>"; };
 		653245BC2B2AF5D500227019 /* OOBE_PrivacySelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OOBE_PrivacySelector.swift; sourceTree = "<group>"; };
@@ -1021,7 +1021,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OpenArtemis/Preview Content\"";
-				DEVELOPMENT_TEAM = 2Q775S63Q3;
+				DEVELOPMENT_TEAM = AWE72ZEPGS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OpenArtemis/Info.plist;
@@ -1062,7 +1062,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OpenArtemis/Preview Content\"";
-				DEVELOPMENT_TEAM = 2Q775S63Q3;
+				DEVELOPMENT_TEAM = AWE72ZEPGS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OpenArtemis/Info.plist;
