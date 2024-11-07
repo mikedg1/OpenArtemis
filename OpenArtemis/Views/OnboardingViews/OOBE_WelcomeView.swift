@@ -17,7 +17,7 @@ struct OOBE_WelcomeView: View {
             VStack {
                 Spacer()
                 
-                Image(uiImage: UIImage(named: "AppIcon")!)
+                SafeImage(uiImage: UIImage(named: "AppIcon"))
                     .resizable()
                     .shadow(radius: 10)
                     .frame(width: 128, height: 128)

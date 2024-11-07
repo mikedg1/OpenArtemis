@@ -32,7 +32,7 @@ struct AppIconElement: View {
     
     var body: some View {
         HStack{
-            Image(uiImage: UIImage(named: icon)!)
+            SafeImage(uiImage: UIImage(named: icon))
                 .resizable()
                 .frame(width: 48, height: 48)
                 .mask(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
