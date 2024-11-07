@@ -38,6 +38,8 @@ extension Defaults.Keys {
     static let showingOOBE = Key<Bool>("showingOOBE", default: true)
     static let seenCaseSensitiveDisclaimer = Key<Bool>("seenCaseSensitiveDisclaimer", default: false)
     
+    static let useAntiFingerprinting = Key<Bool>("useAntiFingerprinting", default: false)
+    
     // MARK: - Website Redirects
     static let youtubeRedirect = Key<String>("youtubeRedirect", default: "yewtu.be")
     static let mediumRedirect = Key<String>("mediumRedirect", default: "scribe.rip")
