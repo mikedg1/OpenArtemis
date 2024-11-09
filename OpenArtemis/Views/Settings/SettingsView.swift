@@ -22,6 +22,7 @@ struct SettingsView: View {
     @Default(.swipeAnywhere) var swipeAnywhere
     @Default(.hideReadPosts) var hideReadPosts
     @Default(.markReadOnScroll) var markReadOnScroll
+    @Default(.useLargeThumbnailForMediaPreview) var useLargeThumbnailForMediaPreview
     
     @Default(.showJumpToNextCommentButton) var showJumpToNextCommentButton
     
@@ -184,6 +185,7 @@ struct SettingsView: View {
                 })
                 Toggle("Hide Read Posts", isOn: $hideReadPosts)
                 Toggle("Mark posts read on scroll", isOn: $markReadOnScroll)
+                Toggle("Use Large Thumbnail For Media", isOn: $useLargeThumbnailForMediaPreview)
             }
             
             Section("Comments"){
