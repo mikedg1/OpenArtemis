@@ -192,15 +192,15 @@ class SubredditUtils: ObservableObject {
             return nil
         }
     }
-    
-    // MARK: - Private Helpers
-    
+
     // Check if subreddit is already saved
-    private func subredditAlreadySaved(managedObjectContext: NSManagedObjectContext, subredditName: String) -> Bool {
+    func subredditAlreadySaved(managedObjectContext: NSManagedObjectContext, subredditName: String) -> Bool {
         let existingSubreddits = localFavorites(managedObjectContext: managedObjectContext)
         return existingSubreddits.contains { $0.name == subredditName }
     }
-    
+
+    // MARK: - Private Helpers
+        
     // Check if multireddit is already saved
     private func multiAlreadySaved(managedObjectContext: NSManagedObjectContext, multiName: String) -> Bool {
         let existingMultis = localMultis(managedObjectContext: managedObjectContext)

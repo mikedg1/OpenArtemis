@@ -70,6 +70,10 @@ struct PostFeedView: View {
                 })
             )
             .contextMenu(menuItems: {
+//                let multiAssociation = SubredditUtils.shared.getMultiFromSub(managedObjectContext: managedObjectContext,
+//                                                                             subredditName: post.subreddit)
+
+                let subredditAlreadySaved = SubredditUtils.shared.subredditAlreadySaved(managedObjectContext: managedObjectContext, subredditName: post.subreddit)
                 ShareLink(item: URL(string: post.commentsURL)!)
                 Button(action: {
                     PostUtils.shared.toggleSaved(context: managedObjectContext, post: post)
@@ -83,6 +87,36 @@ struct PostFeedView: View {
                     Text("Open in in-app browser")
                     Image(systemName: "safari")
                 }
+                // TODO: Doesn't update when shown!, so deleting or adding another way desyncs this
+                Button(action: {
+                    SubredditUtils.shared.saveToSubredditFavorites(managedObjectContext: managedObjectContext, name: post.subreddit)
+                }) {
+                    Text("Add subreddit")
+                    Image(systemName: "plus")
+                }
+                .disabled(
+                    subredditAlreadySaved
+                )
+                
+//                Button(action: {
+//                    if let multiAssociation, !multiAssociation.isEmpty {
+//                        SubredditUtils.shared.toggleMulti(managedObjectContext: managedObjectContext,
+//                                                          multiName: multiAssociation,
+//                                                          subredditName: post.subreddit)
+//                    } else {
+//                        showMultiSelector.toggle()
+//                    }
+//                    
+//                    HapticManager.shared.confirmationInfo()
+//                }) {
+//                    if let multiAssociation, !multiAssociation.isEmpty {
+//                        Label("Remove from '\(multiAssociation)'", systemImage: "trash")
+//                    } else {
+//                        Label("Add to a multi", systemImage: "plus.app")
+////                        Image(systemName: "square.grid.2x2")
+//                    }
+//                }
+        
             })
         }, onTap: { onTap?() })
     }
