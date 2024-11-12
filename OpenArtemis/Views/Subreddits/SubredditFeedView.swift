@@ -40,7 +40,6 @@ struct SubredditFeedView: View {
     
     @State private var listIdentifier = "" // this handles generating a new identifier on load to prevent stale data
     
-    @State private var newId = 0
     @FetchRequest(
         entity: SavedPost.entity(),
         sortDescriptors: []
@@ -82,7 +81,7 @@ struct SubredditFeedView: View {
                             })
                         }
                     }
-
+                    
                     Rectangle()
                         .fill(Color.clear)
                         .frame(height: 1)
@@ -187,14 +186,14 @@ struct SubredditFeedView: View {
         if searchTerm.isEmpty {
             RedditScraper.scrapeSubreddit(subreddit: subredditName, lastPostAfter: lastPostAfter, sort: sort,
                                           trackingParamRemover: trackingParamRemover, over18: over18) { result in
-                defer { // what is this
+                defer {
                     isLoading = false
                 }
-
+                
                 switch result {
                 case .success(let newPosts):
                     if newPosts.isEmpty && self.retryCount <  3 { // if a load fails, auto retry up to 3 times
-                        self.retryCount +=  1 // think this might fail if you read three things?
+                        self.retryCount +=  1
                         self.scrapeSubreddit(lastPostAfter: lastPostAfter, sort: sort, searchTerm: searchTerm, preventListIdRefresh: preventListIdRefresh)
                     } else {
                         self.retryCount =  0
