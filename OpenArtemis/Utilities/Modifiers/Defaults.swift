@@ -40,7 +40,12 @@ extension Defaults.Keys {
     static let seenCaseSensitiveDisclaimer = Key<Bool>("seenCaseSensitiveDisclaimer", default: false)
     
     static let useAntiFingerprinting = Key<Bool>("useAntiFingerprinting", default: false)
-    
+
+    // MARK: - Filters
+    static let subredditFilters = Key<[String]>("subredditFilters", default: [])
+    static let keywordFilters = Key<[String]>("keywordFilters", default: [])
+    static let userFilters = Key<[String]>("userFilters", default: [])
+
     // MARK: - Website Redirects
     static let youtubeRedirect = Key<String>("youtubeRedirect", default: "yewtu.be")
     static let mediumRedirect = Key<String>("mediumRedirect", default: "scribe.rip")

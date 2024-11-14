@@ -26,7 +26,7 @@ class HeadlessWebManager: NSObject, WKNavigationDelegate {
     // Adjusted to store the value of autoClickExpando
     func loadURLAndGetHTML(url: URL, autoClickExpando: Bool = false, preventCacheClear: Bool = false, completion: @escaping (Result<String, Error>) -> Void) {
         let urlSchemeReplacementResult = addSchemeToUrl(url)
-                        
+
         switch urlSchemeReplacementResult {
         case .success(let url):
             self.completion = completion
