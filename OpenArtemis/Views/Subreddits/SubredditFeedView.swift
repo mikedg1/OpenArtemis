@@ -70,7 +70,7 @@ struct SubredditFeedView: View {
                         }
 
                         if !hideReadPosts || (!isRead || isSaved || (isRead && justRead)) {
-                                PostFeedItemView(post: post, isRead: isRead, forceCompactMode: forceCompactMode, isSaved: isSaved, appTheme: appTheme, textSizePreference: textSizePreference, useLargeThumbnail: useLargeThumbnailForMediaPreview) {
+                            PostFeedItemView(post: post, isRead: isRead, forceCompactMode: forceCompactMode, isSaved: isSaved, appTheme: appTheme, textSizePreference: textSizePreference, useLargeThumbnail: useLargeThumbnailForMediaPreview) {
                                 handlePostTap(post, isRead: isRead)
                             }
                             .if(markReadOnScroll, transform: { postFeedItem in
