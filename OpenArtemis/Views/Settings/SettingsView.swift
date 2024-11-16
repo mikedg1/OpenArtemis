@@ -24,7 +24,6 @@ struct SettingsView: View {
     @Default(.markReadOnScroll) var markReadOnScroll
     @Default(.hideReadPostsImmediately) var hideReadPostsImmediately
     @Default(.useLargeThumbnailForMediaPreview) var useLargeThumbnailForMediaPreview
-    
     @Default(.showJumpToNextCommentButton) var showJumpToNextCommentButton
     
     @Default(.doLiveText) var doLiveText
