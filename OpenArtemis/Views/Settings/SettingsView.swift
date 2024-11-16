@@ -22,6 +22,7 @@ struct SettingsView: View {
     @Default(.swipeAnywhere) var swipeAnywhere
     @Default(.hideReadPosts) var hideReadPosts
     @Default(.markReadOnScroll) var markReadOnScroll
+    @Default(.hideReadPostsImmediately) var hideReadPostsImmediately
     @Default(.useLargeThumbnailForMediaPreview) var useLargeThumbnailForMediaPreview
     
     @Default(.showJumpToNextCommentButton) var showJumpToNextCommentButton
@@ -203,6 +204,7 @@ struct SettingsView: View {
                         .foregroundColor(.red)
                 })
                 Toggle("Hide Read Posts", isOn: $hideReadPosts)
+                Toggle("Hide Read Post Immediately", isOn: $hideReadPostsImmediately)
                 Toggle("Mark posts read on scroll", isOn: $markReadOnScroll)
                 Toggle("Use Large Thumbnail For Media", isOn: $useLargeThumbnailForMediaPreview)
             }
