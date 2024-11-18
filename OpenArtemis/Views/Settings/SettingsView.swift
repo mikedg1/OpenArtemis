@@ -204,7 +204,7 @@ struct SettingsView: View {
                 })
                 Toggle("Hide Read Posts", isOn: $hideReadPosts)
                 Toggle("Hide Read Post Immediately", isOn: $hideReadPostsImmediately)
-                Toggle("Mark posts read on scroll", isOn: $markReadOnScroll)
+                Toggle("Mark Posts Read on Scroll", isOn: $markReadOnScroll)
                 Toggle("Use Large Thumbnail For Media", isOn: $useLargeThumbnailForMediaPreview)
             }
             
