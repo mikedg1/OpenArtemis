@@ -8,7 +8,7 @@
 import Foundation
 import Defaults
 
-private func transformedURL(_ url: String, trackingParamRemover: TrackingParamRemover? = nil) -> Post.PrivateURL {
+@MainActor private func transformedURL(_ url: String, trackingParamRemover: TrackingParamRemover? = nil) -> Post.PrivateURL {
     @Default(.redirectToPrivateSites) var redirectToPrivateSites
     
     @Default(.youtubeRedirect) var youtubeRedirect
@@ -113,7 +113,7 @@ private func transformedURL(_ url: String, trackingParamRemover: TrackingParamRe
 
 
 extension String {
-    func privacyURL(trackingParamRemover: TrackingParamRemover? = nil) -> Post.PrivateURL {
+    @MainActor func privacyURL(trackingParamRemover: TrackingParamRemover? = nil) -> Post.PrivateURL {
         transformedURL(self,trackingParamRemover: trackingParamRemover)
     }
     
@@ -125,7 +125,7 @@ extension String {
 ///Typealias PrivateURL that represents a tuple where the first element is the original URL and the second Element is the new private one
 typealias PrivateURL = (originalURL: String,privateURL: String)
 
-func conditionalIncreaseStats(){
+@MainActor func conditionalIncreaseStats(){
     @Default(.trackStats) var trackStats
     @Default(.URLsRedirected) var URLsRedirected
     

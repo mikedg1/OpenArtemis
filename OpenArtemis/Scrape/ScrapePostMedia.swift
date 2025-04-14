@@ -13,7 +13,7 @@ private let invalidURLError = NSError(domain: "Invalid URL", code: 0, userInfo: 
 private let noDataError = NSError(domain: "No data received", code: 0, userInfo: nil)
 
 extension RedditScraper {
-    private static func parseUserTextBody(data: Document, trackingParamRemover: TrackingParamRemover) throws -> String? {
+    @MainActor private static func parseUserTextBody(data: Document, trackingParamRemover: TrackingParamRemover) throws -> String? {
         let postBody = try data.select("div.expando .usertext-body").first()
         
         var body: String? = nil
@@ -92,7 +92,7 @@ extension RedditScraper {
         
     }
     
-    static func parseCommentsData(data: Document, trackingParamRemover: TrackingParamRemover) throws -> [Comment] {
+    @MainActor static func parseCommentsData(data: Document, trackingParamRemover: TrackingParamRemover) throws -> [Comment] {
         var comments: [Comment] = []
         var commentIDs = Set<String>()
         
@@ -103,7 +103,7 @@ extension RedditScraper {
         let topLevelComments = try? data.select("div.sitetable.nestedlisting > div.comment")
         
         // Function to recursively parse comments
-        func parseComment(commentElement: Element, parentID: String?, depth: Int) throws {
+        @MainActor func parseComment(commentElement: Element, parentID: String?, depth: Int) throws {
             let id = try commentElement.attr("data-fullname")
             
             // Check for duplicate comments
@@ -197,7 +197,7 @@ extension RedditScraper {
     }
 }
 
-func redditLinksToInternalLinks(_ element: Element) throws -> String {
+@MainActor func redditLinksToInternalLinks(_ element: Element) throws -> String {
     do {
         let links = try element.select("a[href]")
         

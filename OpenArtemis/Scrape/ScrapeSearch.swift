@@ -101,7 +101,7 @@ extension RedditScraper {
         }
     }
     
-    private static func scrapePostResults(data: Document, trackingParamRemover: TrackingParamRemover?) -> [Post] {
+    @MainActor private static func scrapePostResults(data: Document, trackingParamRemover: TrackingParamRemover?) -> [Post] {
         let postElements = try? data.select("div.search-result-link")
         
         let keywordFilters = Defaults[.keywordFilters]

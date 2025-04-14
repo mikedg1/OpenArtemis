@@ -122,7 +122,7 @@ class PostUtils {
     /// - Parameters:
     ///   - context: The Core Data managed object context.
     ///   - post: The `Post` to save.
-    func savePost(context: NSManagedObjectContext, post: Post) {
+    @MainActor func savePost(context: NSManagedObjectContext, post: Post) {
         @Default(.redirectToPrivateSites) var privULR
         let tempPost = SavedPost(context: context)
         tempPost.author = post.author
@@ -154,7 +154,7 @@ class PostUtils {
     ///   - context: The Core Data managed object context.
     ///   - post: The `Post` to toggle.
     /// - Returns: A boolean indicating whether the post is now saved.
-    func toggleSaved(context: NSManagedObjectContext, post: Post) {
+    @MainActor func toggleSaved(context: NSManagedObjectContext, post: Post) {
         if let savedPost = fetchSavedPost(context: context, id: post.id) {
             removeSavedPost(context: context, savedPost: savedPost)
         } else {

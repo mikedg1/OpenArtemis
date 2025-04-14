@@ -67,7 +67,7 @@ extension RedditScraper {
         }
     }
 
-    static func parseProfileComments(html: String, trackingParamRemover: TrackingParamRemover?) throws -> [Comment] {
+    @MainActor static func parseProfileComments(html: String, trackingParamRemover: TrackingParamRemover?) throws -> [Comment] {
         let doc = try SwiftSoup.parse(html)
         let commentElements = try doc.select("div.thing.comment")
         
@@ -84,7 +84,7 @@ extension RedditScraper {
         return comments
     }
 
-    private static func parseProfileCommentElement(commentElement: Element, trackingParamRemover: TrackingParamRemover?) throws -> Comment {
+    @MainActor private static func parseProfileCommentElement(commentElement: Element, trackingParamRemover: TrackingParamRemover?) throws -> Comment {
         let id = try commentElement.attr("data-fullname")
         let parentID = try? commentElement.attr("data-parent-fullname")
         let author = try commentElement.attr("data-author")
